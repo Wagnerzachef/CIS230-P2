@@ -1,0 +1,25 @@
+//
+//  ProgressBar.swift
+//  QUiz
+//
+//  Created by Zach Wagner on 2/23/24.
+//
+
+import SwiftUI
+
+struct ProgressBar: View {
+    var progress: CGFloat
+    var body: some View {
+        ZStack(alignment: .leading) {
+            Rectangle().frame(maxWidth: 350, maxHeight: 4).foregroundColor(Color(hue:1.0, saturation: 0.0, brightness: 0.6, opacity: 0.327)).cornerRadius(10)
+            
+            Rectangle().frame(width: progress, height: 4).foregroundColor(Color(uiColor: .secondaryLabel)).cornerRadius(10)
+        }
+    }
+}
+
+struct ProgressBar_Previews: PreviewProvider {
+    static var previews: some View {
+        ProgressBar(progress: 12)
+    }
+}
